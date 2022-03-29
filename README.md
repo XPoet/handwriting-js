@@ -12,3 +12,5 @@
 - [手写 call](06-call-apply-bind/01-call.js)
 - [手写 apply](06-call-apply-bind/02-apply.js)
 - [手写 bind](06-call-apply-bind/03-bind.js)
+- [手写函数柯里化](07-curry/index.js)
+- [手写 Promise](08-promise/index.js)
