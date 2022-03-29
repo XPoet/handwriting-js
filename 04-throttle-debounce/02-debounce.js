@@ -1,4 +1,10 @@
-function debounce(fn, wait) {
+/**
+ * 手写函数防抖
+ * @param fn 需要执行的函数
+ * @param wait 等待时间
+ * @returns {(function(...[*]): void)|*}
+ */
+const debounce = (fn, wait) => {
   let timer = null
 
   return function(...args) {
@@ -18,12 +24,12 @@ function debounce(fn, wait) {
 }
 
 // 测试
-const testFn = debounce(() => {
+const testFn_2 = debounce(() => {
   console.log('函数防抖测试 - fn 执行了')
 }, 2000)
 
 // 定时器每 1000 毫秒执行一次 testFn 函数，等待时间未大于 2000 毫秒，所以 fn 永远不会执行
-setInterval(testFn, 1000)
+setInterval(testFn_2, 1000)
 
 // 定时器每 3000 毫秒执行一次 testFn 函数，等待时间大于 2000 毫秒，所以 fn 会隔 3000 执行一次
-setInterval(testFn, 3000) //--> 函数防抖测试 - fn 执行了
+setInterval(testFn_2, 3000) //--> 函数防抖测试 - fn 执行了
